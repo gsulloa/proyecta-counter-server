@@ -7,6 +7,8 @@ services:
       - /var/www/proyecta-counter-server
     expose:
       - "3000"
+    #environment:
+    #  - RAILS_ENV=production
   web:
     build:
       context: .
@@ -14,4 +16,4 @@ services:
     links:
       - app
     ports:
-      - "80:80"
+      - "8080:80"
